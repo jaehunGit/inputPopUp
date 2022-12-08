@@ -11,6 +11,7 @@ import { AgGridReact } from "ag-grid-react";
 
 const OrgTest1 = (props) => {
   const [dataRow, setDataRow] = useState([]);
+  const [nameData1, setNameData1] = useState([]);
 
   const [gridStyle, setGridStyle] = useState({
     width: "100%",
@@ -55,17 +56,7 @@ const OrgTest1 = (props) => {
     "분과 대분류",
     "Board 위원장",
     "Faciliatator",
-    "분과 분류1",
-    "분과 분류2",
-    "분과 분류3",
-    "분과 분류4",
-    "분과 분류5",
-    "분과 분류6",
-    "분과 분류7",
-    "분과 분류8",
-    "분과 분류9",
   ];
-
 
   useEffect(() => {
     setDataRow( data[0] );
@@ -85,6 +76,8 @@ const OrgTest1 = (props) => {
       nameData.push("분과 분류" + (i+1));
     }
 
+    setNameData1(nameData);
+
   }, [dataRow]);
 
 
@@ -95,19 +88,19 @@ const OrgTest1 = (props) => {
   const testResult = data[0]
 
   let result = [
-    { classification: nameData[0], title: titleData[0].title, item: titleData[0].item},
-    { classification: nameData[1], title: titleData[1].title, item: titleData[1].item},
-    { classification: nameData[2], title: titleData[2].title },
-    { classification: nameData[3], title: titleData[3].title },
-    { classification: nameData[4], title: titleData[4].title, board: titleData[13].title, departmentHead: titleData[14].title, boardItem: titleData[13].item, departItem: titleData[14].item},
-    { classification: nameData[5], title: titleData[5].title, board: titleData[15].title, departmentHead: titleData[16].title, boardItem: titleData[15].item, departItem: titleData[16].item },
-    { classification: nameData[6], title: titleData[6].title, board: titleData[17].title, departmentHead: titleData[18].title, boardItem: titleData[17].item, departItem: titleData[18].item },
-    { classification: nameData[7], title: titleData[7].title, board: titleData[19].title, departmentHead: titleData[20].title, boardItem: titleData[19].item, departItem: titleData[20].item },
-    { classification: nameData[8], title: titleData[8].title, board: titleData[21].title, departmentHead: titleData[22].title, boardItem: titleData[21].item, departItem: titleData[22].item },
-    { classification: nameData[9], title: titleData[9].title, board: titleData[23].title, departmentHead: titleData[24].title, boardItem: titleData[23].item, departItem: titleData[24].item },
-    { classification: nameData[10], title: titleData[10].title, board: titleData[25].title, departmentHead: titleData[26].title, boardItem: titleData[25].item, departItem: titleData[26].item },
-    { classification: nameData[11], title: titleData[11].title, board: titleData[27].title, departmentHead: titleData[28].title, boardItem: titleData[27].item, departItem: titleData[28].item },
-    { classification: nameData[12], title: titleData[12].title, board: titleData[29].title, departmentHead: titleData[30].title, boardItem: titleData[29].item, departItem: titleData[30].item },
+    { classification: nameData1[0], title: titleData[0].title, item: titleData[0].item},
+    { classification: nameData1[1], title: titleData[1].title, item: titleData[1].item},
+    { classification: nameData1[2], title: titleData[2].title },
+    { classification: nameData1[3], title: titleData[3].title },
+    { classification: nameData1[4], title: titleData[4].title, board: titleData[13].title, departmentHead: titleData[14].title, boardItem: titleData[13].item, departItem: titleData[14].item},
+    { classification: nameData1[5], title: titleData[5].title, board: titleData[15].title, departmentHead: titleData[16].title, boardItem: titleData[15].item, departItem: titleData[16].item },
+    { classification: nameData1[6], title: titleData[6].title, board: titleData[17].title, departmentHead: titleData[18].title, boardItem: titleData[17].item, departItem: titleData[18].item },
+    { classification: nameData1[7], title: titleData[7].title, board: titleData[19].title, departmentHead: titleData[20].title, boardItem: titleData[19].item, departItem: titleData[20].item },
+    { classification: nameData1[8], title: titleData[8].title, board: titleData[21].title, departmentHead: titleData[22].title, boardItem: titleData[21].item, departItem: titleData[22].item },
+    { classification: nameData1[9], title: titleData[9].title, board: titleData[23].title, departmentHead: titleData[24].title, boardItem: titleData[23].item, departItem: titleData[24].item },
+    { classification: nameData1[10], title: titleData[10].title, board: titleData[25].title, departmentHead: titleData[26].title, boardItem: titleData[25].item, departItem: titleData[26].item },
+    { classification: nameData1[11], title: titleData[11].title, board: titleData[27].title, departmentHead: titleData[28].title, boardItem: titleData[27].item, departItem: titleData[28].item },
+    { classification: nameData1[12], title: titleData[12].title, board: titleData[29].title, departmentHead: titleData[30].title, boardItem: titleData[29].item, departItem: titleData[30].item },
   ];
 
   const test = (params) => {
